@@ -1,0 +1,28 @@
+:root { color-scheme: light dark; --bg:#f4f6fb; --fg:#12192b; --card:#fff; --muted:#667; --line:#d9deea; --accent:#2b5cff; --err:#c62828; --warn:#b26a00; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0e1424; --fg:#e8ecf8; --card:#171f36; --muted:#9aa4c0; --line:#2a3452; --accent:#6d8dff; --err:#ff6b6b; --warn:#ffb74d; } }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, "Vazirmatn", Tahoma, sans-serif; background:var(--bg); color:var(--fg); }
+nav { display:flex; gap:16px; align-items:center; padding:12px 16px; background:var(--card); border-bottom:1px solid var(--line); }
+nav a, a { color:var(--accent); text-decoration:none; }
+nav form { margin-inline-start:auto; }
+.card { max-width:720px; margin:24px auto; padding:20px; background:var(--card); border:1px solid var(--line); border-radius:12px; }
+.card.narrow { max-width:380px; margin-top:12vh; }
+.card.wide { max-width:1100px; }
+label { display:block; margin:10px 0; font-size:14px; }
+label.inline { display:inline-flex; gap:6px; align-items:center; }
+input, select { display:block; width:100%; padding:9px; margin-top:4px; border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--fg); }
+input[type=checkbox] { display:inline; width:auto; margin:0; }
+button, .btn { display:inline-block; padding:9px 14px; border:0; border-radius:8px; background:var(--accent); color:#fff; cursor:pointer; font-size:14px; }
+button.link { background:none; color:var(--accent); padding:0; }
+.controls { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:10px; align-items:end; }
+.actions { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0; }
+.muted { color:var(--muted); font-size:13px; }
+.error { color:var(--err); }
+dl { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; }
+dt { color:var(--muted); }
+.rows { direction:ltr; text-align:left; font-family:ui-monospace, Menlo, monospace; font-size:12px; }
+.row { border-bottom:1px solid var(--line); padding:6px 0; }
+.row .head { word-break:break-word; }
+.row pre { margin:4px 0 0; padding:6px; background:var(--bg); border-radius:6px; overflow-x:auto; white-space:pre-wrap; }
+.lvl-error .head, .lvl-critical .head { color:var(--err); font-weight:600; }
+.lvl-warning .head { color:var(--warn); }
