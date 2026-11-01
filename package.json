@@ -1,0 +1,16 @@
+{
+  "name": "blue-knight-panel",
+  "version": "0.2.0",
+  "description": "Blue Knight Panel (rebuild) - milestone 1: core, auth, logging and diagnostics",
+  "main": "src/main.js",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node --test test/*.test.js",
+    "check": "node scripts/check.js",
+    "diagnostics": "node src/cli.js diagnostics"
+  },
+  "dependencies": {}
+}
